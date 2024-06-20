@@ -1,0 +1,282 @@
+/*Estilos para resetar o CSS*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    font-family: "Ubuntu Condensed", sans-serif;
+}
+
+
+/*Estilos Gerais*/
+.seccao{
+    width: 100%;
+    float: left;
+}
+
+.conteudo{
+    width: 85%;
+    margin: 0 auto;
+}
+
+/*Mudando a cor de fundo da Pagina*/
+html{
+    background-image:url(fundo.jpg);
+    background-position:center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+/*Estilos para Barra de navegacao*/
+.conteudo.navegacao{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    padding: 2% 0 0 0;
+}
+
+.logotipo{
+    display: flex;
+    margin: 0 0 0 -14%;
+    align-items: center;
+}
+
+.logotipo>img{
+    width: 4em;
+    margin: 0 5px 0 0;
+}
+
+.conteudo.navegacao>ul{
+    display: flex;
+    align-items: center
+}
+.conteudo.navegacao>ul>li{
+    margin: 0 14% 0 0;
+}
+.contacto{
+    background-color: #ff76ea;
+    padding: 5% 15%;
+    border-radius: 16px;
+    transition: all 500ms ease-in-out;
+}
+.contacto:hover{
+    background-color:#424bc0;
+    cursor: pointer;
+}
+
+/*Estilizando o Menu principal*/
+.conteudo.artigo-principal{
+    padding: 8% 3% 0 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detalhes>h1{
+    font-size: 4em;
+    margin: 0 0 5% 0;
+}
+
+.botoes>button{
+    background-color: #424bc0;
+    padding: 2% 10%;
+    margin: 3% 3% 0 0;
+    border: none;
+    border-radius: 16px;
+    transition: ease-in-out 500ms;
+    font-weight: bolder;
+}
+.botoes>button:hover{
+    cursor:pointer;
+    background-color: white;
+    color: #424bc0;
+}
+
+.artigo>img{
+    width: 75%;
+    margin: 0 0 0 20%;
+}
+
+.conteudo.rodape{
+    display: flex;
+    flex-direction:column-reverse;
+    align-items: center;
+}
+
+.botoes-sociais{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.botoes-sociais li{
+    margin: 0 0 0 10px;
+}
+.botoes-sociais li a{
+    font-size: 2em;
+}
+.botoes-sociais li a i:hover{
+    color: #424bc0;
+    transition: all 700ms ease;
+}
+
+/*BREAKPOINTS*/
+/*Tamanho MOBILE*/
+@media all and (min-width: 480px) and (max-width:768px){
+    
+    .conteudo.artigo-principal{
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 9% 0 0 0;
+    }
+    .conteudo.rodape{
+        padding: 8% 0 0 0;
+    }
+    
+/*    Barra de Navegacao Lateral*/
+    .nav-cabecalho{
+        background-color: #fff;
+        height: 100%;
+        top: 0px;
+        right: -100%;
+        width: 350px;
+        z-index: 10;
+        padding:26px;
+        position: fixed;
+        transition: right .6s ease-in-out;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nav-cabecalho.activo{
+        right:0px;
+    }
+    
+    .conteudo.navegacao .nav-cabecalho li{
+        padding: 15px 5px;
+    }
+    
+    .conteudo.navegacao .nav-cabecalho li a{
+        color: black;
+    }
+    
+    .botao-abrir{
+        padding-top: 15px;
+        cursor: pointer;
+    }
+    .botao-abrir span i:hover{
+        color: #424bc0;
+        transition:all 700ms ease-in-out;
+    }
+    .botao-abrir span i{
+        font-size: 2em;
+    }
+    
+    .fechar{
+        color:black;
+        float: right;
+        padding: 10px;
+        cursor: pointer;
+        margin: 0 -50% 0 0;
+    }
+    .fa-rectangle-xmark{
+        color: black;
+        font-size: 2em;
+    }
+    
+}
+
+@media all and (max-width: 480px) {
+    
+    .conteudo.artigo-principal{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .detalhes{
+        display: flex;
+        flex-direction: column;
+    }
+    .detalhes>h1{
+        font-size 4em;
+        font-weight: bolder;
+        margin: 0 0 4% 0;
+    }
+    
+    .imagem{
+        width: 100%;
+        margin: 0 0 45% 0;
+    }
+    
+        
+/*    Barra de Navegacao Lateral*/
+    .nav-cabecalho{
+        background-color: #fff;
+        height: 100%;
+        top: 0px;
+        right: -125%;
+        width: 350px;
+        z-index: 10;
+        padding:26px;
+        position: fixed;
+        transition: right .6s ease-in-out;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nav-cabecalho.activo{
+        right:0px;
+    }
+    
+    .conteudo.navegacao .nav-cabecalho li{
+        padding: 15px 5px;
+    }
+    
+    .conteudo.navegacao .nav-cabecalho li a{
+        color: black;
+    }
+    
+    .botao-abrir{
+        padding-top: 15px;
+        cursor: pointer;
+    }
+    .botao-abrir span i:hover{
+        color: #424bc0;
+        transition:all 700ms ease-in-out;
+    }
+    .botao-abrir span i{
+        font-size: 2em;
+    }
+    
+    .fechar{
+        color:black;
+        float: right;
+        padding: 10px;
+        cursor: pointer;
+        margin: 0 -50% 0 0;
+    }
+    .fa-rectangle-xmark{
+        color: black;
+        font-size: 2em;
+    }
+    
+}
+
+
+/*Tamanho Desktop*/
+@media (min-width: 769px){
+    
+    .botao-abrir{
+        display: none;
+    }
+    
+    #fechar{
+        display: none;
+    }
+    
+}
